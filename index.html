@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Takalani Mathanya | Junior Business Analyst</title>
+<title>Takalani Mathanya | Software Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -98,7 +98,6 @@ nav .inner {
   -webkit-text-fill-color: transparent;
 }
 
-/* ── NAV SOCIAL ICONS (ADDED) ── */
 .nav-social {
   display: flex;
   gap: 10px;
@@ -145,11 +144,44 @@ nav .inner {
 
 /* ── HERO ── */
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   padding: 120px 0 80px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 13, 26, 0.88) 0%,
+      rgba(5, 13, 26, 0.72) 35%,
+      rgba(5, 13, 26, 0.48) 60%,
+      rgba(5, 13, 26, 0.58) 100%
+    ),
+    url("taky.jpeg") center top / cover no-repeat;
+  z-index: -2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(5,13,26,0.10), rgba(5,13,26,0.72));
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
 }
 
 .hero-eyebrow {
@@ -167,7 +199,8 @@ nav .inner {
 }
 
 .hero-eyebrow span {
-  width: 30px; height: 1px;
+  width: 30px;
+  height: 1px;
   background: var(--accent);
   display: inline-block;
 }
@@ -191,7 +224,7 @@ nav .inner {
 
 .hero-sub {
   font-size: 18px;
-  color: var(--muted);
+  color: #d8e6f5;
   max-width: 520px;
   margin: 24px 0 40px;
   font-weight: 300;
@@ -578,7 +611,7 @@ section {
 .p1 .project-tag { background: rgba(79,200,255,0.1); color: var(--accent); }
 .p2 .project-tag { background: rgba(167,139,250,0.1); color: var(--accent2); }
 
-/* ── FEATURED PROJECTS (ADDED) ── */
+/* ── FEATURED PROJECTS ── */
 .featured-projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -750,6 +783,31 @@ footer .footer-name {
   .contact-grid { grid-template-columns: 1fr; }
   .stat-grid { grid-template-columns: 1fr 1fr; }
   .nav-links { display: none; }
+
+  .hero {
+    min-height: 100svh;
+    padding: 110px 0 70px;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 13, 26, 0.55) 0%,
+        rgba(5, 13, 26, 0.72) 45%,
+        rgba(5, 13, 26, 0.86) 100%
+      ),
+      url("WhatsApp Image 2026-04-19 at 18.40.10.jpeg") center top / cover no-repeat;
+  }
+
+  .hero-name {
+    font-size: clamp(42px, 12vw, 72px);
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    max-width: 100%;
+  }
 }
 </style>
 </head>
@@ -763,14 +821,13 @@ footer .footer-name {
 <!-- NAV -->
 <nav>
   <div class="inner">
-    <!-- CHANGED: replaced "Analyst" text with GitHub + LinkedIn icons -->
     <div class="nav-social">
       <a href="https://github.com/220695980" target="_blank" title="GitHub">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
         </svg>
       </a>
-      <a href="linkedin.com/in/takalani-mathanya-b0bbaa215" target="_blank" title="LinkedIn">
+      <a href="https://linkedin.com/in/takalani-mathanya-b0bbaa215" target="_blank" title="LinkedIn">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
         </svg>
@@ -787,21 +844,24 @@ footer .footer-name {
 </nav>
 
 <!-- HERO -->
-<div class="container">
-  <section class="hero" style="position:relative;">
-    <div class="hero-eyebrow"><span></span>Junior Business Analyst</div>
-    <h1 class="hero-name">
-      Takalani<br>
-      <span class="line2">Mathanya</span>
-    </h1>
-    <p class="hero-sub">
-      Requirements Engineering, Process Modelling & Data-Driven Decision Support — turning complexity into clarity.
-    </p>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span></span>Software Analyst</div>
+      <h1 class="hero-name">
+        Takalani<br>
+        <span class="line2">Mathanya</span>
+      </h1>
+      <p class="hero-sub">
+        Requirements Engineering, Process Modelling & Data-Driven Decision Support — turning complexity into clarity.
+      </p>
+    </div>
+
     <div class="scroll-indicator">
       <div class="scroll-line"></div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <div class="container">
@@ -822,7 +882,7 @@ footer .footer-name {
           <div class="stat-label">Industry Experience</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">2+</div>
+          <div class="stat-number">3+</div>
           <div class="stat-label">Projects Delivered</div>
         </div>
         <div class="stat-card">
@@ -922,11 +982,11 @@ footer .footer-name {
 
 <div class="divider"></div>
 
-<!-- FEATURED PROJECTS (ADDED) -->
+<!-- FEATURED PROJECTS -->
 <div class="container">
   <section id="featured">
     <div class="reveal">
-      <div class="section-label">Team Projects</div>
+      <div class="section-label">Software Projects</div>
       <h2 class="section-title"></h2>
     </div>
     <div class="featured-projects-grid">
@@ -935,17 +995,14 @@ footer .footer-name {
         <p>
           A comprehensive system to manage core business operations including finance, HR, and inventory under one platform.<br>
           <strong>Tech Stack:</strong> HTML, CSS, Javascript, MariaDB, PHP<br>
-          <span class="nb-statement">NB: It is a team collaboration project.</span>
         </p>
-        <a href="https://sme-ignite-boost.lovable.app" target="_blank">Website</a>
+        <a href="https://smme.lovable.app" target="_blank">Website</a>
       </div>
       <div class="featured-project-card reveal" style="transition-delay: 0.1s">
         <h3>2. Inventory</h3>
         <p>
           A web-based platform to track stock levels, manage suppliers, and generate real-time reports to minimise waste and overstock.<br>
           <strong>Tech Stack:</strong> Java, MySQL, Bootstrap<br>
-          <span class="nb-statement">NB: It is a team collaboration project.</span>
-        </p>
         <a href="https://trad-score.lovable.app" target="_blank">Website</a>
       </div>
       <div class="featured-project-card reveal" style="transition-delay: 0.2s">
@@ -955,7 +1012,7 @@ footer .footer-name {
           <strong>Tech Stack:</strong> Python, SQL, React<br>
           <span class="nb-statement">NB: It is a team collaboration project.</span>
         </p>
-        <a href="http://saleshub.website/" target="_blank">Website</a>
+        <a href="https://teksacrm.lovable.app/" target="_blank">Website</a>
       </div>
     </div>
   </section>
